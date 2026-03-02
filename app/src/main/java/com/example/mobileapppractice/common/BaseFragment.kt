@@ -4,8 +4,8 @@ package com.example.mobileapppractice.common
  * Базовый класс для всех фрагментов приложения
  * Содержит общую логику для работы с диалогами и индикацией загрузки
  *
- * @author баданин
- * @since 2026-03-02
+ * @author Ваше Имя
+ * @since 2024-03-02
  */
 
 import android.app.ProgressDialog
@@ -24,9 +24,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     private var progressDialog: ProgressDialog? = null
 
-    /**
-     * Предоставляет ViewBinding для фрагмента
-     */
     protected abstract fun getBinding(inflater: LayoutInflater, container: ViewGroup?): VB
 
     override fun onCreateView(
@@ -43,9 +40,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         _binding = null
     }
 
-    /**
-     * Показывает диалог с ошибкой
-     */
     protected fun showErrorDialog(message: String) {
         AlertDialog.Builder(requireContext())
             .setTitle("Ошибка")
@@ -55,9 +49,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
             .show()
     }
 
-    /**
-     * Показывает индикатор загрузки
-     */
     protected fun showLoading() {
         if (progressDialog == null) {
             progressDialog = ProgressDialog(requireContext()).apply {
@@ -68,9 +59,6 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         progressDialog?.show()
     }
 
-    /**
-     * Скрывает индикатор загрузки
-     */
     protected fun hideLoading() {
         progressDialog?.dismiss()
     }

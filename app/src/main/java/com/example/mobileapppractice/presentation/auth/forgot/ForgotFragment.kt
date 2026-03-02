@@ -1,5 +1,12 @@
 package com.example.mobileapppractice.presentation.auth.forgot
 
+/**
+ * Фрагмент восстановления пароля
+ *
+ * @author Баданин
+ * @since 2026-03-02
+ */
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View

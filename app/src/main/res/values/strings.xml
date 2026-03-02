@@ -2,19 +2,51 @@
 <resources>
     <string name="app_name">MobileAppPractice</string>
 
-    <!-- Login screen -->
-    <string name="login_greeting">Привет!</string>
-    <string name="login_subtitle">Заполните Свои Данные</string>
+    <!-- Register screen -->
+    <string name="register_title">Регистрация</string>
+    <string name="register_subtitle">Заполните Свои Данные</string>
+    <string name="name_label">Ваше имя</string>
+    <string name="name_hint">xxxxxxxx</string>
     <string name="email_label">Email</string>
     <string name="email_hint">xyz@gmail.com</string>
     <string name="password_label">Пароль</string>
     <string name="password_hint">*********</string>
+    <string name="consent_text">Даю согласие на обработку персональных данных</string>
+    <string name="register_button">Зарегистрироваться</string>
+    <string name="have_account">Есть аккаунт? Войти</string>
+
+    <!-- Login screen -->
+    <string name="login_greeting">Привет!</string>
+    <string name="login_subtitle">Заполните Свои Данные</string>
     <string name="forgot_password">Восстановить</string>
     <string name="login_button">Войти</string>
     <string name="no_account">Вы впервые? Создать</string>
 
+    <!-- Forgot password screen -->
+    <string name="forgot_title">Забыл Пароль</string>
+    <string name="forgot_subtitle">Введите Свою Учетную Запись Для Сброса</string>
+    <string name="send_button">Отправить</string>
+
+    <!-- Verification screen -->
+    <string name="verification_title">OTP Проверка</string>
+    <string name="verification_subtitle">Пожалуйста, Проверьте Свою Электронную Почту, Чтобы Увидеть Код Подтверждения</string>
+    <string name="resend_code">Отправить заново</string>
+    <string name="otp_code">ОТР Код</string>
+
+    <!-- New password screen -->
+    <string name="new_password_title">Задать Новый Пароль</string>
+    <string name="new_password_subtitle">Установите Новый Пароль Для Входа В Вашу Учетную Запись</string>
+    <string name="confirm_password">Подтверждение пароля</string>
+    <string name="save_button">Сохранить</string>
+
     <!-- Error messages -->
-    <string name="error_invalid_email">Некорректный email</string>
+    <string name="error_invalid_email">Некорректный email. Используйте формат: имя@домен.ру (только маленькие буквы и цифры)</string>
     <string name="error_email_required">Введите email</string>
     <string name="error_password_required">Введите пароль</string>
+    <string name="error_name_required">Введите имя</string>
+    <string name="error_network">Ошибка соединения с интернетом</string>
+    <string name="error_server">Ошибка сервера. Попробуйте позже</string>
+
+    <!-- Success messages -->
+    <string name="success_email_sent">Проверьте Ваш Email\nМы Отправили Код Восстановления\nПароля На Вашу Электронную Почту.</string>
 </resources>
