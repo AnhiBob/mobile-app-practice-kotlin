@@ -19,6 +19,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+
+        // Добавьте это - репозиторий для Supabase
+        maven {
+            url = uri("https://jitpack.io")
+        }
     }
 }
 
