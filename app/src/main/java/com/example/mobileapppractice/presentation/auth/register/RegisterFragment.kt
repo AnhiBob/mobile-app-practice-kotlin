@@ -14,13 +14,13 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import android.widget.Toast
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.mobileapppractice.R
 import com.example.mobileapppractice.common.BaseFragment
 import com.example.mobileapppractice.databinding.FragmentRegisterBinding
 import java.util.regex.Pattern
-
-import androidx.navigation.fragment.findNavController
 
 class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
 
@@ -37,30 +37,24 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
     }
 
     private fun setupListeners() {
-        // Валидация email
         binding.emailInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 validateEmail(s.toString())
             }
-
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        // Чекбокс согласия
         binding.consentCheckbox.setOnCheckedChangeListener { _, isChecked ->
             binding.registerButton.isEnabled = isChecked
         }
 
-        // Кнопка регистрации
         binding.registerButton.setOnClickListener {
             if (validateInputs()) {
                 performRegistration()
             }
         }
 
-        // Переход на экран входа
         binding.loginLink.setOnClickListener {
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
         }
@@ -104,9 +98,15 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>() {
 
     private fun performRegistration() {
         showLoading()
+
+        // Имитация запроса к серверу
         binding.root.postDelayed({
             hideLoading()
+
+            // Пункт 7: Переход на Sign In после успешной регистрации
+            Toast.makeText(requireContext(), "Регистрация успешна!", Toast.LENGTH_SHORT).show()
             findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+
         }, 2000)
     }
 }

@@ -5,6 +5,7 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
+    <!-- Экран входа -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.mobileapppractice.presentation.auth.login.LoginFragment"
@@ -21,6 +22,7 @@
 
     </fragment>
 
+    <!-- Экран регистрации -->
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.mobileapppractice.presentation.auth.register.RegisterFragment"
@@ -33,10 +35,47 @@
 
     </fragment>
 
+    <!-- Экран восстановления пароля -->
     <fragment
         android:id="@+id/forgotFragment"
         android:name="com.example.mobileapppractice.presentation.auth.forgot.ForgotFragment"
         android:label="Восстановление пароля"
-        tools:layout="@layout/fragment_forgot" />
+        tools:layout="@layout/fragment_forgot">
+
+        <action
+            android:id="@+id/action_forgotFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_forgotFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
+
+    </fragment>
+
+    <!-- Экран верификации OTP -->
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.example.mobileapppractice.presentation.auth.verification.VerificationFragment"
+        android:label="Подтверждение"
+        tools:layout="@layout/fragment_verification">
+
+        <action
+            android:id="@+id/action_verificationFragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
+
+    </fragment>
+
+    <!-- Экран создания нового пароля -->
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.example.mobileapppractice.presentation.auth.newpassword.NewPasswordFragment"
+        android:label="Новый пароль"
+        tools:layout="@layout/fragment_new_password">
+
+        <action
+            android:id="@+id/action_newPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+    </fragment>
 
 </navigation>

@@ -27,6 +27,7 @@
     <string name="forgot_subtitle">Введите Свою Учетную Запись Для Сброса</string>
     <string name="send_button">Отправить</string>
 
+
     <!-- Verification screen -->
     <string name="verification_title">OTP Проверка</string>
     <string name="verification_subtitle">Пожалуйста, Проверьте Свою Электронную Почту, Чтобы Увидеть Код Подтверждения</string>
@@ -48,5 +49,7 @@
     <string name="error_server">Ошибка сервера. Попробуйте позже</string>
 
     <!-- Success messages -->
-    <string name="success_email_sent">Проверьте Ваш Email\nМы Отправили Код Восстановления\nПароля На Вашу Электронную Почту.</string>
+    <string name="success_email_sent">Проверьте ваш Email\nМы Отправили код восстановления\nПароля на вашу электронную почту.</string>
+
+
 </resources>
