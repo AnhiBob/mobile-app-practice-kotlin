@@ -47,6 +47,7 @@
     <string name="error_name_required">Введите имя</string>
     <string name="error_network">Ошибка соединения с интернетом</string>
     <string name="error_server">Ошибка сервера. Попробуйте позже</string>
+    <string name="error_password_mismatch">Пароли не совпадают</string>
 
     <!-- Success messages -->
     <string name="success_email_sent">Проверьте ваш Email\nМы Отправили код восстановления\nПароля на вашу электронную почту.</string>
